@@ -1,0 +1,63 @@
+* {
+  font-family: "poppins";
+  font-weight: bold;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsla(339, 100%, 15%, 1);
+  color: hsla(339, 100%, 90%, 1);
+  text-align: center;
+}
+
+.strength-meter {
+  --strength: 0;
+  height: 2rem;
+  width: 70%;
+  border: 2px solid hsla(339, 100%, 60%, 1);
+  border-radius: 1rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.strength-meter::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: calc(var(--strength, 0) * 1%);
+  background-color: hsla(339, 100%, 75%, 1);
+
+  transition: width 200ms;
+}
+
+.password-input {
+  width: 50%;
+  padding: 0.25rem 0.75rem;
+  margin-top: 1rem;
+  background-color: hsla(339, 100%, 25%, 1);
+  color: black;
+  border: 2px solid hsla(339, 100%, 90%, 1);
+  outline: none;
+  font-size: 20px;
+  font-weight: bolder;
+  transition: 300ms;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.password-input:focus {
+  transform: scale(1.1);
+  background-color: hsla(339, 100%, 80%, 0.7);
+}
+
+.comments > * {
+  margin-top: 0.5rem;
+  color: hsla(339, 100%, 80%, 0.7);
+}
